@@ -1,4 +1,4 @@
-#ifdef ALARM_INTF_H
+#ifndef ALARM_INTF_H
 #define ALARM__INTF_H
 #include <inttypes.h>
 // Initialize the alarm interfaces
