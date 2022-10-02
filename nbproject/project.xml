@@ -6,7 +6,7 @@
             <name>HW1</name>
             <creation-uuid>b2118e4b-a5e5-4e6a-b593-d4c28ecfe2df</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
             <header-extensions>h</header-extensions>
             <asminc-extensions/>
@@ -15,7 +15,11 @@
             <sourceRootList/>
             <confList>
                 <confElem>
-                    <name>default</name>
+                    <name>use_sfr</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>use_plib</name>
                     <type>2</type>
                 </confElem>
             </confList>

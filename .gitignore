@@ -3,3 +3,5 @@
 **/dist
 **/KiCad-backups
 **/#auto_saved_files#
+/build/
+/dist/
