@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=alarm_intf.c alarm_intf_p.c main.c
+SOURCEFILES_QUOTED_IF_SPACED=alarm_intf.c alarm_intf_p.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/alarm_intf.o ${OBJECTDIR}/alarm_intf_p.o ${OBJECTDIR}/main.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/alarm_intf.o.d ${OBJECTDIR}/alarm_intf_p.o.d ${OBJECTDIR}/main.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/alarm_intf.o ${OBJECTDIR}/alarm_intf_p.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/alarm_intf.o.d ${OBJECTDIR}/alarm_intf_p.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/alarm_intf.o ${OBJECTDIR}/alarm_intf_p.o ${OBJECTDIR}/main.o
+OBJECTFILES=${OBJECTDIR}/alarm_intf.o ${OBJECTDIR}/alarm_intf_p.o
 
 # Source Files
-SOURCEFILES=alarm_intf.c alarm_intf_p.c main.c
+SOURCEFILES=alarm_intf.c alarm_intf_p.c
 
 
 
@@ -107,42 +107,30 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/alarm_intf.o: alarm_intf.c  .generated_files/flags/use_sfr/b2682c22f107e7798e825bd185e9aa5530cab845 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
+${OBJECTDIR}/alarm_intf.o: alarm_intf.c  .generated_files/flags/use_sfr/f458c1defb65a2f8d180f3847264d17a6a645050 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/alarm_intf.o.d 
 	@${RM} ${OBJECTDIR}/alarm_intf.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/alarm_intf.o.d" -o ${OBJECTDIR}/alarm_intf.o alarm_intf.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS PLIB WARNING  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/alarm_intf.o.d" -o ${OBJECTDIR}/alarm_intf.o alarm_intf.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/alarm_intf_p.o: alarm_intf_p.c  .generated_files/flags/use_sfr/fc0a7ceba4ff05ad19980e4a2676ac270ec03c2e .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
+${OBJECTDIR}/alarm_intf_p.o: alarm_intf_p.c  .generated_files/flags/use_sfr/dc535bac21878903a6ea6efb96baf6a882000341 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/alarm_intf_p.o.d 
 	@${RM} ${OBJECTDIR}/alarm_intf_p.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/alarm_intf_p.o.d" -o ${OBJECTDIR}/alarm_intf_p.o alarm_intf_p.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS PLIB WARNING  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/main.o: main.c  .generated_files/flags/use_sfr/1936e3f3fd66a9afa07bd3d82977f0f91de68631 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS PLIB WARNING  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/alarm_intf_p.o.d" -o ${OBJECTDIR}/alarm_intf_p.o alarm_intf_p.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
 	
 else
-${OBJECTDIR}/alarm_intf.o: alarm_intf.c  .generated_files/flags/use_sfr/7f57c8f1ddc9071c8492c1f1af01028b238f6a93 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
+${OBJECTDIR}/alarm_intf.o: alarm_intf.c  .generated_files/flags/use_sfr/3f90e7eb25ce39b5f2dbfba09e381b8e526f38e7 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/alarm_intf.o.d 
 	@${RM} ${OBJECTDIR}/alarm_intf.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/alarm_intf.o.d" -o ${OBJECTDIR}/alarm_intf.o alarm_intf.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS PLIB WARNING  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/alarm_intf.o.d" -o ${OBJECTDIR}/alarm_intf.o alarm_intf.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/alarm_intf_p.o: alarm_intf_p.c  .generated_files/flags/use_sfr/6f731495810c9d51c3f781c516fec6c972a2103c .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
+${OBJECTDIR}/alarm_intf_p.o: alarm_intf_p.c  .generated_files/flags/use_sfr/9e8a82fa1e96578f603f4619bc2cd4800067f65 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/alarm_intf_p.o.d 
 	@${RM} ${OBJECTDIR}/alarm_intf_p.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/alarm_intf_p.o.d" -o ${OBJECTDIR}/alarm_intf_p.o alarm_intf_p.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS PLIB WARNING  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/main.o: main.c  .generated_files/flags/use_sfr/4b7c76d432e42001b984d60caf25e309409ceec8 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS PLIB WARNING  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/alarm_intf_p.o.d" -o ${OBJECTDIR}/alarm_intf_p.o alarm_intf_p.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
 	
 endif
 
@@ -157,12 +145,12 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 ${DISTDIR}/HW1.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) -g   -mprocessor=$(MP_PROCESSOR_OPTION)  -o ${DISTDIR}/HW1.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}          -DXPRJ_use_sfr=$(CND_CONF)    -D_SUPPRESS PLIB WARNING  $(COMPARISON_BUILD)      -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D=__DEBUG_D,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml -mdfp="${DFP_DIR}"
+	${MP_CC} $(MP_EXTRA_LD_PRE) -g   -mprocessor=$(MP_PROCESSOR_OPTION)  -o ${DISTDIR}/HW1.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}          -DXPRJ_use_sfr=$(CND_CONF)    -D_SUPPRESS_PLIB_WARNING  $(COMPARISON_BUILD)      -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D=__DEBUG_D,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml -mdfp="${DFP_DIR}"
 	
 else
 ${DISTDIR}/HW1.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -mprocessor=$(MP_PROCESSOR_OPTION)  -o ${DISTDIR}/HW1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}          -DXPRJ_use_sfr=$(CND_CONF)    -D_SUPPRESS PLIB WARNING  $(COMPARISON_BUILD)  -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml -mdfp="${DFP_DIR}"
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -mprocessor=$(MP_PROCESSOR_OPTION)  -o ${DISTDIR}/HW1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}          -DXPRJ_use_sfr=$(CND_CONF)    -D_SUPPRESS_PLIB_WARNING  $(COMPARISON_BUILD)  -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml -mdfp="${DFP_DIR}"
 	${MP_CC_DIR}/xc32-bin2hex ${DISTDIR}/HW1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} 
 endif
 

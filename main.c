@@ -1,17 +1,7 @@
-/* 
- * File:   newmain.c
- * Author: calum
- *
- * Created on October 2, 2022, 1:03 PM
- */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "alarm_intf.h"
 
-/*
- * 
- */
-int main(int argc, char** argv) {
+void main() {
 
     return (EXIT_SUCCESS);
 }
