@@ -21,6 +21,34 @@ void initAlarm(){
             
     // set inputs
     TRISBSET = 0x01 << 4;
+
+    // set outputs
+    TRISBCLR = 0x03 << 14;
+}
+
+uint8_t readDoor(){
+    // returns bit 4 (the sensor bit)
+    return (PORTB & 0x10) >> 4 ;
+}
+
+// turn warning LED OFF
+void ledOff(){
+    PORTBCLR = 0x01 << 15;
+}
+
+// turn warning LED ON
+void ledOn(){
+    PORTBSET = 0x01 << 15;
+}
+
+// turn alarm buzzer OFF
+void alarmOff(){
+    PORTBCLR = 0x01 << 14;
+}
+
+// turn alarm buzzer ON
+void alarmOn(){
+    PORTBSET = 0x01 << 14;
 }
 
 #endif
