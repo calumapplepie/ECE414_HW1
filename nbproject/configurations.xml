@@ -201,7 +201,7 @@
         <property key="save-temps" value="false"/>
         <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-D_SUPPRESS PLIB WARNING "/>
+        <appendMe value="-D_SUPPRESS_PLIB_WARNING "/>
       </C32Global>
     </conf>
     <conf name="use_plib" type="2">
