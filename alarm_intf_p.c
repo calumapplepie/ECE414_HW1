@@ -1,3 +1,11 @@
+#define _UART_H_
+#define _SYSTEM_HEADER_FILE
+#define _DMA_1XX_2XX_H_
+#define PMP_H
+#define _RTCC_H_
+#define _SPI_H_
+#define _PIC32INT_HEADER_FILE
+
 #include <plib.h>
 
 #include "alarm_intf.h"
@@ -5,6 +13,7 @@
 
 #ifdef ALARM_USE_PLIB
 
+#include <inttypes.h>
 // Initialize the alarm interfaces
 void initAlarm(){
     PORTSetPinsDigitalIn(IOPORT_B, BIT_4);
