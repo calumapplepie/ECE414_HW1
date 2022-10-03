@@ -5,6 +5,8 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>alarm_intf.h</itemPath>
+      <itemPath>warnfsm.h</itemPath>
+      <itemPath>alarmfsm.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -16,6 +18,7 @@
       <itemPath>alarm_intf.c</itemPath>
       <itemPath>alarm_intf_p.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>warnfsm.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
