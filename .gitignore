@@ -5,3 +5,4 @@
 **/#auto_saved_files#
 /build/
 /dist/
+**/Makefile*.mk

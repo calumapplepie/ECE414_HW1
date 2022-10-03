@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=alarm_intf.c alarm_intf_p.c main.c
+SOURCEFILES_QUOTED_IF_SPACED=alarm_intf.c alarm_intf_p.c main.c warnfsm.c alarmfsm.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/alarm_intf.o ${OBJECTDIR}/alarm_intf_p.o ${OBJECTDIR}/main.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/alarm_intf.o.d ${OBJECTDIR}/alarm_intf_p.o.d ${OBJECTDIR}/main.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/alarm_intf.o ${OBJECTDIR}/alarm_intf_p.o ${OBJECTDIR}/main.o ${OBJECTDIR}/warnfsm.o ${OBJECTDIR}/alarmfsm.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/alarm_intf.o.d ${OBJECTDIR}/alarm_intf_p.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/warnfsm.o.d ${OBJECTDIR}/alarmfsm.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/alarm_intf.o ${OBJECTDIR}/alarm_intf_p.o ${OBJECTDIR}/main.o
+OBJECTFILES=${OBJECTDIR}/alarm_intf.o ${OBJECTDIR}/alarm_intf_p.o ${OBJECTDIR}/main.o ${OBJECTDIR}/warnfsm.o ${OBJECTDIR}/alarmfsm.o
 
 # Source Files
-SOURCEFILES=alarm_intf.c alarm_intf_p.c main.c
+SOURCEFILES=alarm_intf.c alarm_intf_p.c main.c warnfsm.c alarmfsm.c
 
 
 
@@ -125,6 +125,18 @@ ${OBJECTDIR}/main.o: main.c  .generated_files/flags/use_sfr/7276c24778aa9af0da6d
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
 	
+${OBJECTDIR}/warnfsm.o: warnfsm.c  .generated_files/flags/use_sfr/babb68eaae2d2f3f3f2c6afffcf04f215a316681 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/warnfsm.o.d 
+	@${RM} ${OBJECTDIR}/warnfsm.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/warnfsm.o.d" -o ${OBJECTDIR}/warnfsm.o warnfsm.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/alarmfsm.o: alarmfsm.c  .generated_files/flags/use_sfr/44d7a2ddd758407fc5f63025c113fc2a51c29313 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/alarmfsm.o.d 
+	@${RM} ${OBJECTDIR}/alarmfsm.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/alarmfsm.o.d" -o ${OBJECTDIR}/alarmfsm.o alarmfsm.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
+	
 else
 ${OBJECTDIR}/alarm_intf.o: alarm_intf.c  .generated_files/flags/use_sfr/3f90e7eb25ce39b5f2dbfba09e381b8e526f38e7 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
 	@${MKDIR} "${OBJECTDIR}" 
@@ -143,6 +155,18 @@ ${OBJECTDIR}/main.o: main.c  .generated_files/flags/use_sfr/24f78a7e28ca0bd98551
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/warnfsm.o: warnfsm.c  .generated_files/flags/use_sfr/d4a988b8a2934d01c690dafec079c8ece14a7824 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/warnfsm.o.d 
+	@${RM} ${OBJECTDIR}/warnfsm.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/warnfsm.o.d" -o ${OBJECTDIR}/warnfsm.o warnfsm.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/alarmfsm.o: alarmfsm.c  .generated_files/flags/use_sfr/d154788a0c474d7bc0d566853472892a564c8733 .generated_files/flags/use_sfr/9143b21709c8e8205fe70af4f7eb6bd43c50da44
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/alarmfsm.o.d 
+	@${RM} ${OBJECTDIR}/alarmfsm.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/alarmfsm.o.d" -o ${OBJECTDIR}/alarmfsm.o alarmfsm.c    -DXPRJ_use_sfr=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
 	
 endif
 

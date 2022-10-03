@@ -19,6 +19,7 @@
       <itemPath>alarm_intf_p.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>warnfsm.c</itemPath>
+      <itemPath>alarmfsm.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
