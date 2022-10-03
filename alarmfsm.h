@@ -12,5 +12,7 @@
 
 extern uint8_t warn;
 
+void tickFct_ALARMFSM();
+
 #endif	/* ALARMFSM_H */
 

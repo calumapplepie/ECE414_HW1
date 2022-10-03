@@ -1,0 +1,15 @@
+digraph g {
+	graph[mindist=3; nodesep=2; ranksep=2];
+      
+	OFF[rank=1];
+	WARN[label="\N\ntimer++",rank=2];
+	ALARM[rank=2];
+	OFF->OFF [label="readDoor()==0"];
+	OFF -> WARN [label="readDoor() == 1\ntimer=0;  warn=1;"]
+	WARN -> OFF [label="readDoor() == 0\nwarn=0"]	
+	WARN:sw -> WARN:s [label="readDoor() && timer<30"]
+	WARN -> ALARM [label="readDoor() == 1 && timer > 30\nalarmOn();"]
+	ALARM -> ALARM [label="readDoor()==1"];
+	ALARM -> OFF [label="readDoor()==0\nalarmOff();  warn=0;"]	
+					
+}
