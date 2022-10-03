@@ -12,11 +12,14 @@ void tickFct_WARNFSM(){
     if(state == WRNON){
         state = WRNOFF;
     }
-    else if(readDoor()){
+    else if(warn){
         state = WRNON;
     }
-    else { state = WRNOFF;}
+    else { 
+        state = WRNOFF;
+    }
     
+    // state actions
     if(state == WRNON){
         ledOn();
     }
