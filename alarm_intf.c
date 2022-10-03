@@ -51,4 +51,4 @@ void alarmOn(){
     PORTBSET = 0x01 << 14;
 }
 
-#endif
+#endif /* ALARM_USE_PLIB */

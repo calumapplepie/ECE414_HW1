@@ -1,4 +1,4 @@
-#include <plib.h>;
+#include <plib.h>
 
 #include "alarm_intf.h"
 

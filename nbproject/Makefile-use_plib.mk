@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=alarm_intf.c alarm_intf_p.c main.c warnfsm.c alarmfsm.c
+SOURCEFILES_QUOTED_IF_SPACED=alarm_intf.c alarm_intf_p.c main.c warnfsm.c alarmfsm.c ztimer.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/alarm_intf.o ${OBJECTDIR}/alarm_intf_p.o ${OBJECTDIR}/main.o ${OBJECTDIR}/warnfsm.o ${OBJECTDIR}/alarmfsm.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/alarm_intf.o.d ${OBJECTDIR}/alarm_intf_p.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/warnfsm.o.d ${OBJECTDIR}/alarmfsm.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/alarm_intf.o ${OBJECTDIR}/alarm_intf_p.o ${OBJECTDIR}/main.o ${OBJECTDIR}/warnfsm.o ${OBJECTDIR}/alarmfsm.o ${OBJECTDIR}/ztimer.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/alarm_intf.o.d ${OBJECTDIR}/alarm_intf_p.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/warnfsm.o.d ${OBJECTDIR}/alarmfsm.o.d ${OBJECTDIR}/ztimer.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/alarm_intf.o ${OBJECTDIR}/alarm_intf_p.o ${OBJECTDIR}/main.o ${OBJECTDIR}/warnfsm.o ${OBJECTDIR}/alarmfsm.o
+OBJECTFILES=${OBJECTDIR}/alarm_intf.o ${OBJECTDIR}/alarm_intf_p.o ${OBJECTDIR}/main.o ${OBJECTDIR}/warnfsm.o ${OBJECTDIR}/alarmfsm.o ${OBJECTDIR}/ztimer.o
 
 # Source Files
-SOURCEFILES=alarm_intf.c alarm_intf_p.c main.c warnfsm.c alarmfsm.c
+SOURCEFILES=alarm_intf.c alarm_intf_p.c main.c warnfsm.c alarmfsm.c ztimer.c
 
 
 
@@ -137,6 +137,12 @@ ${OBJECTDIR}/alarmfsm.o: alarmfsm.c  .generated_files/flags/use_plib/4324eb52ed6
 	@${RM} ${OBJECTDIR}/alarmfsm.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -DALARM_USE_PLIB -MP -MMD -MF "${OBJECTDIR}/alarmfsm.o.d" -o ${OBJECTDIR}/alarmfsm.o alarmfsm.c    -DXPRJ_use_plib=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
 	
+${OBJECTDIR}/ztimer.o: ztimer.c  .generated_files/flags/use_plib/a3365a74f49ecb2c36d732c076692d6e6cbc113 .generated_files/flags/use_plib/9143b21709c8e8205fe70af4f7eb6bd43c50da44
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ztimer.o.d 
+	@${RM} ${OBJECTDIR}/ztimer.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -DALARM_USE_PLIB -MP -MMD -MF "${OBJECTDIR}/ztimer.o.d" -o ${OBJECTDIR}/ztimer.o ztimer.c    -DXPRJ_use_plib=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
+	
 else
 ${OBJECTDIR}/alarm_intf.o: alarm_intf.c  .generated_files/flags/use_plib/2353783b12f425aa068a58aadc3c1c25cf55e5ea .generated_files/flags/use_plib/9143b21709c8e8205fe70af4f7eb6bd43c50da44
 	@${MKDIR} "${OBJECTDIR}" 
@@ -167,6 +173,12 @@ ${OBJECTDIR}/alarmfsm.o: alarmfsm.c  .generated_files/flags/use_plib/303722f792b
 	@${RM} ${OBJECTDIR}/alarmfsm.o.d 
 	@${RM} ${OBJECTDIR}/alarmfsm.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -DALARM_USE_PLIB -MP -MMD -MF "${OBJECTDIR}/alarmfsm.o.d" -o ${OBJECTDIR}/alarmfsm.o alarmfsm.c    -DXPRJ_use_plib=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/ztimer.o: ztimer.c  .generated_files/flags/use_plib/8251da077e6b7d47989ac2696b6c20a35e4a0af8 .generated_files/flags/use_plib/9143b21709c8e8205fe70af4f7eb6bd43c50da44
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ztimer.o.d 
+	@${RM} ${OBJECTDIR}/ztimer.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -DALARM_USE_PLIB -MP -MMD -MF "${OBJECTDIR}/ztimer.o.d" -o ${OBJECTDIR}/ztimer.o ztimer.c    -DXPRJ_use_plib=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING  -mdfp="${DFP_DIR}"  
 	
 endif
 
