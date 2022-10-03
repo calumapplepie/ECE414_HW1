@@ -7,7 +7,7 @@ void tickFct_ALARMFSM(){
     static enum state_t {OFF, WARN, ALARM} state = OFF;
     static uint16_t timer = 0;
     
-    // meally actions and transitions
+    // mealy actions and transitions
     switch(state){
         case OFF:
             if(readDoor()){
@@ -49,7 +49,9 @@ void tickFct_ALARMFSM(){
             break;
     }
    
-    //moore actions
+    // moore actions
+    // some idempotent mealy actions in diagram were made into moore actions for
+    // safety
     switch(state){
             case OFF:
                 timer = 0;
